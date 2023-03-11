@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:mason/mason.dart';
 
 void run(HookContext context) async {
-  final progress = context.logger.progress('Installing packages');
+  final progress = context.logger.progress('Creating project');
   // Read vars.
   final name = context.vars['project_name'];
   final description = context.vars['description'];
@@ -22,12 +22,16 @@ $$ | \_/ $$ |\$$$$$$  |$$ |  $$ |\$$$$$$$\ $$$$$$$  |\$$$$$$  |
 """);
   context.logger.info("Generating project $name for you by Mohesu team.");
   await Future.delayed(Duration(seconds: 2));
-  await Process.run('flutter', [
-    'create',
-    '--org $projectId',
-    '--project-name $name',
-    '--description $description'
-  ]);
+  await Process.run(
+    'flutter',
+    [
+      'create',
+      '--org $projectId',
+      '--project-name $name',
+      '--description $description'
+    ],
+    runInShell: true,
+  );
   await Process.run('rm -rf', ['pubspec.yaml']);
   await Process.run('rm -rf', ['pubspec.lock']);
   await Process.run('rm -rf', ['lib/']);
