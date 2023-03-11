@@ -12,6 +12,11 @@ vars:
     description: The project name
     default: my_app
     prompt: What is the project name?
+  project_id:
+    type: string
+    description: The project id
+    default: com.mohesu
+    prompt: What is the project id?
   description:
     type: string
     description: A short project description

@@ -55,7 +55,8 @@ class DashBoardState extends ConsumerState<DashBoard>
     final package = ref.watch(packageInfoProvider);
     return Scaffold(
       appBar: AppBar(
-        title: const Text({{project_name.titleCase()}}),
+        title: const Text(
+          "{{project_name.titleCase()}}",
           style: TextStyle(
             fontFamily: 'harlow',
             fontSize: 30,

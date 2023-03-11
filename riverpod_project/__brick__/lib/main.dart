@@ -110,7 +110,7 @@ void main() async {
   runApp(
     ProviderScope(
       observers: [Logger()],
-      child: OverlayNotification.global(
+      child: const OverlayNotification.global(
         child: ConnectivityAppWrapper(
           app: MyApp(),
         ),

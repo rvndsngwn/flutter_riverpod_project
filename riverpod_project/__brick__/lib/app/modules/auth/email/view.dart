@@ -21,7 +21,7 @@ class EmailLoginView extends HookConsumerWidget {
       body: snapshot.when(
         data: (package) {
           return FlutterLogin(
-            title: {{project_name.titleCase()}},
+            title: "{{project_name.titleCase()}}",
             passwordValidator: (value) =>
                 controller.passwordValidator(value ?? ''),
             onSignup: (signupData) => controller.onSignUp(signupData),

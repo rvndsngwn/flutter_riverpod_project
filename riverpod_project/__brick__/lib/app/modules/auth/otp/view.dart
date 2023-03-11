@@ -60,7 +60,7 @@ class OtpLoginView extends HookConsumerWidget {
                   ),
                 ),
                 Text(
-                  {{project_name.titleCase()}},
+                  "{{project_name.titleCase()}}",
                   textScaleFactor: 2.5,
                   style: TextStyle(
                     color: context.primary,

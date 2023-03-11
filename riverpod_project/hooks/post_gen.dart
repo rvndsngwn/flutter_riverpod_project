@@ -7,5 +7,9 @@ Future<void> run(HookContext context) async {
   // Run `flutter packages get` after generation.
   await Process.run('flutter', ['packages', 'get']);
 
+  // Run `flutter pub run build_runner build --delete-conflicting-outputs` pub get.
+  await Process.run('flutter',
+      ['pub', 'run', 'build_runner', 'build', '--delete-conflicting-outputs']);
+
   progress.complete();
 }
