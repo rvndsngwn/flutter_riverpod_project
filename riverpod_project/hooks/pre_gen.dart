@@ -9,6 +9,7 @@ void run(HookContext context) async {
   final description = context.vars['description'];
   final projectId = context.vars['project_id'];
 
+  context.logger.info("brick version: 0.0.1");
   // Use the `Logger` instance.
   context.logger.info(r"""
 $$\      $$\           $$\                                     
