@@ -9,7 +9,7 @@ void run(HookContext context) async {
   final description = context.vars['description'];
   final projectId = context.vars['project_id'];
 
-  context.logger.info("brick version: 0.0.1");
+  context.logger.info("brick version: 0.0.1+1");
   // Use the `Logger` instance.
   context.logger.info(r"""
 $$\      $$\           $$\                                     
@@ -33,9 +33,10 @@ $$ | \_/ $$ |\$$$$$$  |$$ |  $$ |\$$$$$$$\ $$$$$$$  |\$$$$$$  |
     ],
     runInShell: true,
   );
-  await Process.run('rm -rf', ['pubspec.yaml']);
-  await Process.run('rm -rf', ['pubspec.lock']);
-  await Process.run('rm -rf', ['lib/']);
-  await Process.run('rm -rf', ['test/']);
+
+  // await Process.run('rm -rf', ['pubspec.yaml']);
+  // await Process.run('rm -rf', ['pubspec.lock']);
+  // await Process.run('rm -rf', ['lib/']);
+  // await Process.run('rm -rf', ['test/']);
   progress.complete();
 }
