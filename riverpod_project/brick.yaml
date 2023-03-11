@@ -1,0 +1,20 @@
+name: flutter_riverpod_project
+description: A Flutter project template with Riverpod, Go-Router, Appwrite, Hive and Freezed & JsonSerializable. 
+version: 0.0.1
+repository: https://github.com/rvndsngwn/flutter_riverpod_project
+
+environment:
+  mason: ">=0.1.0-dev <0.1.0"
+
+vars:
+  project_name:
+    type: string
+    description: The project name
+    default: my_app
+    prompt: What is the project name?
+  description:
+    type: string
+    description: A short project description
+    default: My new mohesu flutter app
+    prompt: What is the project description?
+  
