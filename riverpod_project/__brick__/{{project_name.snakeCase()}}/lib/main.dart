@@ -10,7 +10,6 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:utils_widget/utils_widget.dart';
-import 'firebase_options.dart';
 import 'my_app.dart';
 import 'utils/logger.dart';
 import 'common.dart';
@@ -93,7 +92,10 @@ late FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  /// TODO: await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  /// Add default firebase options with firebase cli
+  await Firebase.initializeApp();
   ApiClient.client
       .setEndpoint(Env.appwriteEndpoint)
       .setProject(Env.appwriteProjectId);

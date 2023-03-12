@@ -17,6 +17,6 @@ $$ | \_/ $$ |\$$$$$$  |$$ |  $$ |\$$$$$$$\ $$$$$$$  |\$$$$$$  |
 \__|     \__| \______/ \__|  \__| \_______|\_______/  \______/
 """);
   context.logger.info("Generating project $name for you by Mohesu team.");
-  await Future.delayed(Duration(seconds: 5));
+  await Future.delayed(Duration(seconds: 3));
   progress.complete();
 }
