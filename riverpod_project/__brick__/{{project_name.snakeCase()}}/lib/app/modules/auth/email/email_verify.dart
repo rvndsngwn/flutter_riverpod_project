@@ -74,7 +74,7 @@ class _EmailVerifyState extends ConsumerState<EmailVerifyView> {
             child: Assets.rive.mailSend.rive(),
           ),
           const SizedBox(height: 10),
-          Assets.mohesu.mohesuPng.image(
+          Assets.mohesu.mohesu.image(
             width: 150,
             height: 50,
             fit: BoxFit.cover,

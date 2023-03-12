@@ -52,10 +52,10 @@ class ProfileImageView extends HookConsumerWidget {
                             width: double.infinity,
                             shimmerBaseColor: context.primary,
                             shimmerHighlightColor: context.secondary,
-                            errorWidget: Assets.mohesu.mohesuPng.image(),
+                            errorWidget: Assets.mohesu.mohesu.image(),
                           ),
                         )
-                      : Assets.mohesu.mohesuPng.image(),
+                      : Assets.mohesu.mohesu.image(),
                 ),
               ),
               Positioned(
